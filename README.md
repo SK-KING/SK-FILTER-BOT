@@ -5,7 +5,7 @@
   ALEXA FILTER BOT
 </h1>
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+VJ+Filter+Bot!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+Alexa+Filter+Bot!)
 </p>
 
 ## Main Feature 
@@ -173,7 +173,7 @@ Use these settings when adding a monitor:</b>
 <details><summary><b>Deploy To VPS</summary>
 
 
-`git clone https://github.com/VJBots/VJ-Filter-Bot`
+`git clone https://github.com/SK-KING/SK-FILTER-BOT`
 
 Install Packages
 
