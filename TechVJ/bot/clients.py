@@ -6,12 +6,12 @@ import asyncio
 import logging
 from info import *
 from pyrogram import Client
-from TechVJ.util.config_parser import TokenParser
-from TechVJ.bot import multi_clients, work_loads, TechVJBot
+from Alexa.util.config_parser import TokenParser
+from Alexa.bot import multi_clients, work_loads, Alexa
 
 
 async def initialize_clients():
-    multi_clients[0] = TechVJBot
+    multi_clients[0] = Alexa
     work_loads[0] = 0
     all_tokens = TokenParser().parse_from_env()
     if not all_tokens:
