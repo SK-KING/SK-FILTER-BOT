@@ -44,7 +44,7 @@ loop = asyncio.get_event_loop()
 async def start():
     print('\n')
     print('Initalizing Your Bot')
-    bot_info = await Team sakshi.get_me()
+    bot_info = await Team TechVJBot.get_me()
     await initialize_clients()
     for name in files:
         with open(name) as a:
@@ -56,15 +56,15 @@ async def start():
             load = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(load)
             sys.modules["plugins." + plugin_name] = load
-            print("Team Sakshi Imported => " + plugin_name)
+            print("Team TechVJBot Imported => " + plugin_name)
     if ON_HEROKU:
         asyncio.create_task(ping_server())
     b_users, b_chats = await db.get_banned()
     temp.BANNED_USERS = b_users
     temp.BANNED_CHATS = b_chats
     await Media.ensure_indexes()
-    me = await TeamSakshi.get_me()
-    temp.BOT = TeamSakshi
+    me = await TechVJBot.get_me()
+    temp.BOT = TechVJBot
     temp.ME = me.id
     temp.U_NAME = me.username
     temp.B_NAME = me.first_name
@@ -74,7 +74,7 @@ async def start():
     today = date.today()
     now = datetime.now(tz)
     time = now.strftime("%H:%M:%S %p")
-    await TeamSakshi.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
+    await TeamTechVJBot.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
     if CLONE_MODE == True:
         print("Restarting All Clone Bots.......")
         await restart_bots()
